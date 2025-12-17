@@ -1,0 +1,123 @@
+@media (max-width: 600px) {
+  .conteudo {
+    margin-top: 20px;
+  }
+
+  .descricao {
+    padding: 0 16px;
+    font-size: 16px;
+  }
+
+  .titulo-descricao {
+    font-size: 1.5rem;
+  }
+
+  .container-esboço {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .caixaesboço1,
+  .caixaesboço2,
+  .caixaesboço3,
+  .caixaesboço4 {
+    width: 95%;
+    max-width: 95%;
+  }
+
+  .caixa.logo {
+    position: relative;
+    height: 150px;
+  }
+
+  .caixaesboço1 img,
+  .caixaesboço2 img,
+  .caixaesboço3 img,
+  .caixaesboço4 img {
+    max-height: 200px;
+  }
+
+  .titulo1,
+  .titulo2,
+  .titulo3,
+  .titulo4 {
+    font-size: 1.5rem;
+  }
+   .footer {
+    width: 100%;
+    font-size: 13px;
+    padding: 5px;
+  }
+    .footer {
+    padding: 20px 10px;
+  }
+
+  .footer-content p {
+    font-size: 14px;
+  }
+
+  .footer a {
+    display: inline-block;
+    margin-top: 2px;
+  }
+  #btn-topo {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+/* TABLET  */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .conteudo {
+    margin-top: 40px;
+  }
+
+  .descricao {
+    padding: 0 32px;
+    font-size: 18px;
+  }
+
+  .container-esboço {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .caixaesboço1,
+  .caixaesboço2,
+  .caixaesboço3,
+  .caixaesboço4 {
+    width: 45%;
+    max-width: 45%;
+    min-width: 300px;
+  }
+
+  .titulo1,
+  .titulo2,
+  .titulo3,
+  .titulo4 {
+    font-size: 1.8rem;
+  }
+
+  .caixa.logo {
+    height: 200px;
+  }
+
+  .caixaesboço1 img,
+  .caixaesboço2 img,
+  .caixaesboço3 img,
+  .caixaesboço4 img {
+    max-height: 250px;
+  }
+ .footer-content p {
+    width: auto;
+     height: 15px;
+    font-size: 15px;
+  } 
+ 
+}

@@ -1,0 +1,397 @@
+:root {
+  --cor-borda: #fff;
+  --cor-borda-escura: #312f2f;
+  --cor-caixa: #c0a267;
+  --cor-caixa-logo: #b3955b;
+  --cor-caixa-titulo: #ffff;
+  --cor-texto-strong: #f7f1f1c5;
+  --cor-texto-versiculo: #111111;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  
+}
+
+header .caixa {
+  min-height: 48px; /* mantém altura confortável do header */
+  display: flex;
+  justify-content: center; /* Centraliza na horizontal */
+  align-items: center; /* Centraliza na vertical */
+  text-align: center; /* Centraliza o texto */
+}
+/* espaço entre header e conteúdo */
+.conteudo {
+  display: flex;
+  padding: 0;
+  flex-direction: column; /* Alinha os itens em coluna */
+  margin-top: 10px; /* Espaçamento acima do conteúdo */
+  gap: 12px; /* Espaço entre os itens dentro da caixa */
+
+  max-width: 100%; /* garante que não haja limite de largura */
+}
+
+/* caixa logo */
+.caixa {
+  background: var(--cor-caixa-logo); /*cor de fundo*/
+  width: 100%; /*largura total*/
+  box-shadow: 0 10px 25px var(--cor-borda-escura); /* sombra suave */
+  border: 2px solid var(--cor-borda); /* borda */
+  display: flex;
+  position: relative; /* Fixa a posição no topo */
+  justify-content: center;
+  align-items: center;
+  margin: 0px; /* espaçamento externo */
+  padding: 10px 12px; /*espaçamento interno*/
+  min-height: 48px;
+  z-index: 1000; /* Garante que a caixa do logo fique acima de outros elementos */
+}
+/* caixa titulo */
+.caixatitulo {
+  width: 100%;
+  max-width: 1000px; /* limite um pouco menor para aparência mais compacta */
+  margin: 12px auto 0; /* reduz o espaçamento superior para deixar mais suave */
+  padding: 10px 14px; /* padding mais compacto */
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: center;
+  background: var(--cor-caixa-titulo);
+  box-shadow: 0 6px 18px rgba(49, 47, 47, 0.06); /* sombra mais suave e maior espalhamento */
+  border-radius: 10px; /* cantos arredondados mais evidentes */
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+/* Estilo da descricao */
+.descricao {
+  margin-top: 10px; /* Espaçamento acima da descrição */
+  font-family: "Arial", sans-serif; /* Fonte Arial */
+  font-size: clamp(1.25rem, 2.5vw, 1.9rem);
+}
+
+/*caixa esboço 1*/
+.caixaesboço1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  margin: 0; /* remove margin */
+  padding: 30px 24px; /* Espaço interno para não grudar nas bordas */
+  box-shadow: 0 2px 8px var(--cor-borda-escura);
+  width: 45%; /* Para duas caixas lado a lado */
+  min-width: 300px; /* Largura mínima para não ficar muito pequena */
+  max-width: 600px; /*opicional: Largura máxima para não ficar muito grande */
+  border: 1px solid var(--cor-borda);
+  background-color: var(--cor-caixa); /* Cor de fundo */
+  z-index: 1; /* Garante que a caixa de esboço fique abaixo de outros elementos */
+  gap: 16px; /* Espaço entre os itens dentro da caixa */
+}
+/*caixa esboço2*/
+.caixaesboço2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  margin: 0; /* remove margin */
+  padding: 30px 24px; /* Espaço interno para não grudar nas bordas */
+  box-shadow: 0 2px 8px var(--cor-borda-escura);
+  width: 45%;
+  min-width: 300px;
+  max-width: 600px;
+  border: 1px solid var(--cor-borda);
+  background-color: var(--cor-caixa); /* Cor de fundo */
+  z-index: 1; /* Garante que a caixa de esboço fique abaixo de outros elementos */
+  gap: 16px; /* Espaço entre os itens dentro da caixa */
+}
+/*caixa esboço3*/
+.caixaesboço3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  margin: 0; /* remove margin */
+  box-shadow: 0 5px 8px var(--cor-borda-escura);
+  width: 45%;
+  padding: 30px 24px; /* Espaço interno para não grudar nas bordas */
+  box-shadow: 0 2px 8px var(--cor-borda-escura);
+  min-width: 300px;
+  max-width: 600px;
+  border: 1px solid var(--cor-borda);
+  background-color: var(--cor-caixa); /* Cor de fundo */
+  z-index: 1; /* Garante que a caixa de esboço fique abaixo de outros elementos */
+  gap: 16px; /* Espaço entre os itens dentro da caixa */
+}
+/*caixa esboço4*/
+.caixaesboço4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  padding: 30px 24px; /* Espaço interno para não grudar nas bordas */
+  margin: 0; /* remove margin */
+  box-shadow: 0 2px 8px var(--cor-borda-escura);
+  width: 45%;
+  min-width: 300px;
+  max-width: 600px;
+  border: 1px solid var(--cor-borda);
+  background-color: var(--cor-caixa); /* Cor de fundo */
+  z-index: 1; /* Garante que a caixa de esboço fique abaixo de outros elementos */
+  gap: 16px; /* Espaço entre os itens dentro da caixa */
+}
+
+.container-esboço {
+  display: flex;
+  align-items: stretch; /* mudou de flex-start para stretch */
+  flex-direction: row; /* Um ao lado do outro */
+  gap: 10px; /* Espaço entre as caixas */
+  justify-content: flex-start; /* Centraliza as caixas na tela */
+  padding: 0 0px; /* Espaçamento interno nas laterais */
+  box-sizing: border-box;
+  padding: 0 0px; /* Espaçamento interno nas laterais */
+}
+/* Estilo dos titulos */
+.titulo1,
+.titulo2,
+.titulo3,
+.titulo4 {
+  font-size: 2rem; /* Tamanho da fonte */
+  text-align: left; /* Alinha o texto à esquerda */
+  color: var(--cor-borda-escura); /* Cor do texto */
+  width: 100%;
+  font-weight: bold; /* Deixa o texto em negrito */
+  font-family: "Arial", sans-serif;
+}
+
+/* Estilo do textchave do esboço */
+.textchave1,
+.textchave2,
+.textchave3,
+.textchave4 {
+  font-size: 1.3rem; /* Tamanho da fonte */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+/*estilo de topicos*/
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/* Estilo dos paragrafos */
+p {
+  font-size: 1.05rem;
+  text-align: left;
+  font-family: "Arial", sans-serif;
+}
+.text1,
+.text2,
+.text3,
+.text4,
+.text5,
+.text6,
+.text7,
+.text8,
+.text9,
+.text10,
+.text11,
+.text12 {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #222;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: left;
+}
+
+strong {
+  color: var(--cor-texto-strong); /* Cor do texto */
+}
+/* Estilo dos versiculos*/
+.versiculo1,
+.versiculo2,
+.versiculo3,
+.versiculo4,
+.versiculo5,
+.versiculo6,
+.versiculo7,
+.versiculo8,
+.versiculo9,
+.versiculo10,
+.versiculo11,
+.versiculo12,
+.versiculo13,
+.versiculo14,
+.versiculo15,
+.versiculo16,
+.versiculo17,
+.versiculo18,
+.versiculo19,
+.versiculo20,
+.versiculo21,
+.versiculo22,
+.versiculo23,
+.versiculo24 {
+  font-size: 65%;
+  text-align: left; /* Alinha o texto à esquerda */
+  width: 100%;
+  margin-bottom: 10px;
+  color: var(--cor-texto-versiculo);
+  font-family: "Georgia", serif; /* Exemplo de fonte para o texto base */
+}
+ul {
+  list-style-position: inside;
+  margin-bottom: 15px;
+  padding-left: 0; /* Remove o recuo padrão do ul */
+  margin-left: 0; /* Remove o recuo padrão do ul */
+  text-indent: 0px;
+}
+/* logo */
+.logo {
+  width: 150px; /* define a largura da imagem */
+  max-width: 80%; /* Limita a largura da imagem */
+  height: auto; /* Mantém proporção */
+}
+/* Estilo das imagens dentro das caixas de esboço */
+.caixaesboço1 img,
+.caixaesboço2 img,
+.caixaesboço3 img,
+.caixaesboço4 img {
+  width: 100%;
+  height: 300px;
+  margin: 0;
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
+  border: 4px solid var(--cor-borda-escura); /* Adiciona a borda */
+}
+img:hover {
+  transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
+  transition: transform 0.5s ease; /* Transição suave */
+}
+/* Estilo dos botões */
+button {
+  display: inline-flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  padding: 15px 100px; /* Espaçamento interno */
+  font-size: 18px; /* Tamanho da fonte */
+  background: linear-gradient(180deg, #111111 0%, #0066cc 100%); /* azul */
+  border: 2px solid #0457a7; /* borda azul escura */
+  color: var(--cor-borda); /* Cor do texto */
+  font-weight: 700; /* destaque do nome */
+  letter-spacing: 0.6px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px rgba(2, 27, 70, 0.18),
+    inset 0 -2px 0 rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  border-radius: 6px; /* cantos levemente quadrados */
+  cursor: pointer; /* Muda o cursor ao passar o mouse */
+}
+/* Efeito ao passar o mouse */
+button:hover,
+button:focus,
+.btn-azul:hover,
+.btn-azul:focus {
+  transform: translateY(-2px) scale(1.02);
+  background: linear-gradient(180deg,#b3955b 0%, #b3955b 100%);
+  box-shadow: 0 6px 14px rgba(2,27,70,0.22), inset 0 -2px 0 rgba(255,255,255,0.08);
+  outline: none;
+}
+.footer {
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura automática */
+  background: var(--cor-caixa-logo);
+  color: #312f2f;
+  text-align: center;
+  padding: 40px 0 10px; /* Espaçamento interno */
+  margin-top: 3px; /* Espaçamento acima do footer */
+  border-top: 2px solid var(--cor-borda-escura);
+  font-size: 1rem; /* Tamanho da fonte */
+}
+/*descrição do footer*/
+.footer {
+  width: 100%;
+  background: var(--cor-caixa-logo, #222);
+  color: #fff;
+  text-align: center;
+  padding: 24px 24px;
+  margin-top: 4px;
+}
+/* Cor dos links linkedin e whatsapp */
+ .footer-content a {
+  color: #1e90ff;
+}
+/* BOTÃO VOLTAR AO TOPO */
+#btn-topo {
+  position: fixed;
+  bottom: 10px;
+  right: 24px;
+  width: 38px;
+  height:38px;
+  border-radius: 50px;
+  border: none;
+  background: #b3955b; /* mesma paleta do site */
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 999;
+  transition: transform 0.3s ease, background 0.3s ease, opacity 0.3s;
+}
+
+#btn-topo:hover {
+  background: #312f2f;
+  transform: translateY(-4px);
+}
+
+
+
+
+
+/*animação do footer */
+.footer-content a:hover {
+  color: #0066cc;
+}
+/*animação do titulo */
+.titulo1,
+.titulo2,
+.titulo3,
+.titulo4 {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInTitulo 1s forwards;
+}
+
+@keyframes fadeInTitulo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*animação da caixa esboço */
+.caixaesboço1,
+.caixaesboço2,
+.caixaesboço3,
+.caixaesboço4 {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInCaixa 0.8s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInCaixa {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
