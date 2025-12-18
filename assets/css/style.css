@@ -333,26 +333,32 @@ button:focus,
 /* BOTÃO VOLTAR AO TOPO */
 #btn-topo {
   position: fixed;
-  bottom: 10px;
+  bottom: 24px;
   right: 24px;
-  width: 38px;
-  height:38px;
-  border-radius: 50px;
-  border: none;
-  background: #b3955b; /* mesma paleta do site */
+  width: 48px;
+  height: 48px;
+  padding: 0;  /*  REMOVE padding */
+  margin: 0;
+  border-radius: 50%;   /*  deixa redondo */
+  box-sizing: border-box;  /*  garante cálculo correto */
+  background-color: #0066cc;
   color: #fff;
-  font-size: 17px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 1;          /* 🔴 evita deformar */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
   z-index: 999;
-  transition: transform 0.3s ease, background 0.3s ease, opacity 0.3s;
 }
-
+/*animação do botão voltar ao topo */
 #btn-topo:hover {
-  background: #312f2f;
-  transform: translateY(-4px);
-}
+  transform: scale(1.12) translateY(-2px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.35);
+  background-color: #0066cc;
 
 
 
@@ -395,3 +401,4 @@ button:focus,
     transform: scale(1);
   }
 }
+
