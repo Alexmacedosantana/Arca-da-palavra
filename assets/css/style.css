@@ -45,7 +45,6 @@ header .caixa {
   background: var(--cor-caixa-logo); /*cor de fundo*/
   width: 100%; /*largura total*/
   box-shadow: 0 10px 25px var(--cor-borda-escura); /* sombra suave */
-  border: 2px solid var(--cor-borda); /* borda */
   display: flex;
   position: relative; /* Fixa a posição no topo */
   justify-content: center;
@@ -349,8 +348,8 @@ button:not(.btn-topo):focus,
   color: #312f2f;
   text-align: center;
   padding: 40px 0 10px; /* Espaçamento interno */
-  margin-top: 3px; /* Espaçamento acima do footer */
-  border-top: 2px solid var(--cor-borda-escura);
+  margin-top: 2px; /* Espaçamento acima do footer */
+   box-shadow: #111111 0px -2px 5px; /* sombra suave */
   font-size: 1rem; /* Tamanho da fonte */
 }
 /*descrição do footer*/
@@ -404,6 +403,7 @@ button:not(.btn-topo):focus,
     transform: scale(1);
   }
 }
+
 
 
 
