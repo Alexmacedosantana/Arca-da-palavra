@@ -61,7 +61,7 @@
     display: inline-block;
     margin-top: 2px;
   }
-  .btn-topo {
+  #btn-topo {
     width: 34px;
     height: 34px;
     font-size: 15px;
@@ -122,3 +122,4 @@
  
 
 }
+
