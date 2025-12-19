@@ -331,7 +331,7 @@ button:focus,
   color: #1e90ff;
 }
 /* BOTÃO VOLTAR AO TOPO */
-#btn-topo {
+.btn-topo {
   position: fixed;
   bottom: 24px;
   right: 24px;
@@ -355,7 +355,7 @@ button:focus,
   z-index: 999;
 }
 /*animação do botão voltar ao topo */
-#btn-topo:hover {
+.btn-topo:hover {
   transform: scale(1.12) translateY(-2px);
   box-shadow: 0 10px 18px;
   background-color: #0066cc;
@@ -401,5 +401,6 @@ button:focus,
     transform: scale(1);
   }
 }
+
 
 
