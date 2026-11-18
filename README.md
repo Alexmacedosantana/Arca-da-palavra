@@ -23,7 +23,7 @@ https://alexmacedosantana.github.io/Arca-da-palavra/
 - GitHub Pages (deploy)
 ## 👨‍💻 Desenvolvedor
 **Alex Macedo**  
-Pastor | Estudante de Análise e Desenvolvimento de Sistemas  
+Pastor | Formado em Análise e Desenvolvimento de Sistemas  
 - 🔗 LinkedIn: https://www.linkedin.com/in/alex-macedo12  
 - 📱 WhatsApp: (68) 99978-8376  
 ## 🙏 Propósito
