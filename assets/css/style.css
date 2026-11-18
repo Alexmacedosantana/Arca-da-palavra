@@ -6,7 +6,6 @@
   --cor-caixa-titulo: #ffff;
   --cor-texto-strong: #f7f1f1c5;
   --cor-texto-versiculo: #111111;
-
 }
 
 * {
@@ -19,15 +18,14 @@ html {
   scroll-behavior: smooth;
   box-sizing: border-box;
   overflow-x: hidden;
-  
 }
 
 header .caixa {
   min-height: 48px; /* mantém altura confortável do header */
   display: flex;
-  justify-content: center; /* Centraliza na horizontal */
+  justify-content: space-between;
   align-items: center; /* Centraliza na vertical */
-  text-align: center; /* Centraliza o texto */
+  padding: 10px 24px;
 }
 /* espaço entre header e conteúdo */
 .conteudo {
@@ -36,7 +34,6 @@ header .caixa {
   flex-direction: column; /* Alinha os itens em coluna */
   margin-top: 10px; /* Espaçamento acima do conteúdo */
   gap: 12px; /* Espaço entre os itens dentro da caixa */
-
   max-width: 100%; /* garante que não haja limite de largura */
 }
 
@@ -45,14 +42,45 @@ header .caixa {
   background: var(--cor-caixa-logo); /*cor de fundo*/
   width: 100%; /*largura total*/
   box-shadow: 0 10px 25px var(--cor-borda-escura); /* sombra suave */
+
   display: flex;
   position: relative; /* Fixa a posição no topo */
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 0px; /* espaçamento externo */
   padding: 10px 12px; /*espaçamento interno*/
   min-height: 48px;
   z-index: 1000; /* Garante que a caixa do logo fique acima de outros elementos */
+}
+
+.navegacao {
+  position: relative;
+}
+
+.menu-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-links a {
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #27231b;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.menu-links a:hover,
+.menu-links a:focus-visible {
+  outline: 2px solid #173b63;
+  outline-offset: 2px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+#menu-toggle {
+  display: none;
 }
 /* caixa titulo */
 .caixatitulo {
@@ -154,6 +182,116 @@ header .caixa {
   padding: 0 0px; /* Espaçamento interno nas laterais */
   box-sizing: border-box;
   padding: 0 0px; /* Espaçamento interno nas laterais */
+}
+
+.busca-esbocos {
+  width: min(100% - 32px, 760px);
+  margin: 20px auto 16px;
+}
+
+.busca-esbocos > label {
+  display: block;
+  margin-bottom: 8px;
+  color: #312f2f;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.campo-busca {
+  display: flex;
+  gap: 8px;
+}
+
+#buscar-esbocos {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 16px;
+  border: 1px solid #8a7448;
+  border-radius: 10px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+}
+
+#buscar-esbocos:focus-visible,
+.limpar-busca:focus-visible,
+.btn-abrir-biblia:focus-visible,
+.referencia-biblica:focus-visible {
+  outline: 3px solid #0066cc;
+  outline-offset: 3px;
+}
+
+.resultado-busca {
+  min-height: 1.4em;
+  margin-top: 8px;
+  color: #312f2f;
+  font-size: 0.95rem;
+}
+
+.caixaesboço1[hidden],
+.caixaesboço2[hidden],
+.caixaesboço3[hidden],
+.caixaesboço4[hidden] {
+  display: none !important;
+}
+
+.btn-abrir-biblia {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: auto;
+  padding: 14px 20px;
+  border: 1px solid #173b63;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #173b63, #0066cc);
+  box-shadow: 0 5px 12px rgba(2, 27, 70, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.btn-abrir-biblia:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #b3955b, #8b7040);
+  box-shadow: 0 8px 16px rgba(2, 27, 70, 0.24);
+}
+
+.icone-biblia {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.referencia-biblica {
+  color: #064f91;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.referencia-biblica:hover {
+  color: #003366;
+}
+
+.limpar-busca {
+  flex: 0 0 auto;
+  padding: 0 14px;
+  border: 1px solid #8a7448;
+  border-radius: 10px;
+  background: #fff;
+  color: #312f2f;
+  font: inherit;
+  cursor: pointer;
+}
+
+.limpar-busca:hover {
+  background: #f3ead8;
 }
 /* Estilo dos titulos */
 .titulo1,
@@ -277,7 +415,7 @@ img:hover {
   transition: transform 0.5s ease; /* Transição suave */
 }
 /* Estilo dos botões */
-button {
+button:not(.btn-topo):not(.limpar-busca) {
   display: inline-flex;
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
   align-items: center; /* Centraliza o conteúdo verticalmente */
@@ -296,8 +434,8 @@ button {
   cursor: pointer; /* Muda o cursor ao passar o mouse */
 }
 /* Efeito ao passar o mouse */
-button:not(.btn-topo):hover,
-button:not(.btn-topo):focus,
+button:not(.btn-topo):not(.limpar-busca):hover,
+button:not(.btn-topo):not(.limpar-busca):focus,
 .btn-azul:hover,
 .btn-azul:focus {
   transform: translateY(-2px) scale(1.02);
@@ -340,16 +478,15 @@ button:not(.btn-topo):focus,
 
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
 .footer {
-  width: 100%; /* Largura total */
-  height: 100%; /* Altura automática */
+  width: 70%; /* Largura total */
+  height: 70%; /* Altura automática */
   background: var(--cor-caixa-logo);
   color: #312f2f;
   text-align: center;
   padding: 40px 0 10px; /* Espaçamento interno */
   margin-top: 2px; /* Espaçamento acima do footer */
-   box-shadow: #111111 0px -2px 5px; /* sombra suave */
+  box-shadow: #111111 0px -2px 5px; /* sombra suave */
   font-size: 1rem; /* Tamanho da fonte */
 }
 /*descrição do footer*/
@@ -362,7 +499,7 @@ button:not(.btn-topo):focus,
   margin-top: 4px;
 }
 /* Cor dos links linkedin e whatsapp */
- .footer-content a {
+.footer-content a {
   color: #1e90ff;
 }
 
@@ -403,8 +540,3 @@ button:not(.btn-topo):focus,
     transform: scale(1);
   }
 }
-
-
-
-
-
